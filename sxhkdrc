@@ -46,9 +46,9 @@ super + {t,shift + t,s,f}
 # focus/swap
 #
 
-# focus the node in the given direction
+# focus the node in the given direction or move it to another monitor
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,s} {west,south,north,east} --follow
+	bspc node -{f,m} {west,south,north,east} --follow
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
