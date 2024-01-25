@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	alacritty
+        alacritty
 
 # browser
 super + b
@@ -12,11 +12,11 @@ super + b
 
 # program launcher
 super + @space
-	rofi -show drun
+        rofi -show drun
 
 # make sxhkd reload its configuration files:
 super + ctrl + r 
-	pkill -USR1 -x sxhkd && notify-send "sxhkd reloaded"
+        pkill -USR1 -x sxhkd && notify-send "sxhkd reloaded"
 
 #
 # bspwm hotkeys
@@ -24,15 +24,15 @@ super + ctrl + r
 
 # quit/restart bspwm
 super + shift + {e,r}
-	bspc {quit,wm -r && notify-send "bspwm restarted"}
+        bspc {quit,wm -r && notify-send "bspwm restarted"}
 
 # close and kill
 super + {_,shift + }w
-	bspc node -{c,k}
+        bspc node -{c,k}
 
 # alternate between the tiled and monocle layout
 super + m
-	bspc desktop -l next
+        bspc desktop -l next
 
 #
 # state/flags
@@ -40,7 +40,7 @@ super + m
 
 # set the window state
 super + {t,shift + t,s,f}
-	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+        bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
 
 #
 # focus/swap
@@ -48,15 +48,15 @@ super + {t,shift + t,s,f}
 
 # focus the node in the given direction or move it to another monitor
 super + {_,shift + }{h,j,k,l}
-	bspc node -{f,m} {west,south,north,east} --follow
+        bspc node -{f,m} {west,south,north,east} --follow
 
 # focus the next/previous desktop in the current monitor
 super + bracket{left,right}
-	bspc desktop -f {prev,next}.local
+        bspc desktop -f {prev,next}.local
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
-	bspc {desktop -f,node -d} 'focused:^{1-9,10}' # like dwm i.e independent set of workspaces
+        bspc {desktop -f,node -d} 'focused:^{1-9,10}' # like dwm i.e independent set of workspaces
 
 super + {_,shift + }{comma,period}
         bspc {monitor -f, node -m} {prev,next} --follow
@@ -74,4 +74,4 @@ super + ctrl + {h,j,k,l}
 
 # move a floating window
 super + {Left,Down,Up,Right}
-	bspc node -v {-20 0,0 20,0 -20,20 0}
+        bspc node -v {-20 0,0 20,0 -20,20 0}
